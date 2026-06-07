@@ -17,7 +17,11 @@ const getApiBase = () => {
   }
 
   if (typeof window !== 'undefined' && window.location.hostname.endsWith('.github.dev')) {
-    return `${window.location.protocol}//${window.location.hostname.replace('-3000.', '-5000.')}`;
+    const backendHost = window.location.hostname.includes('-3000.')
+      ? window.location.hostname.replace('-3000.', '-5000.')
+      : window.location.hostname.replace('.github.dev', '-5000.github.dev');
+
+    return `${window.location.protocol}//${backendHost}`;
   }
 
   return 'http://localhost:5000';
