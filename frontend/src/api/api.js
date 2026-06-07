@@ -11,7 +11,19 @@
  * - Environment-aware debug logging
  */
 
-const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const getApiBase = () => {
+  if (process.env.REACT_APP_API_URL) {
+    return process.env.REACT_APP_API_URL;
+  }
+
+  if (typeof window !== 'undefined' && window.location.hostname.endsWith('.github.dev')) {
+    return `${window.location.protocol}//${window.location.hostname.replace('-3000.', '-5000.')}`;
+  }
+
+  return 'http://localhost:5000';
+};
+
+const API_BASE = getApiBase();
 const REQUEST_TIMEOUT = 10000; // 10 seconds
 const MAX_RETRIES = 1;
 
