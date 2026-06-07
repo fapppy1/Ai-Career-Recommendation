@@ -1,0 +1,11 @@
+﻿John Doe
+Software Engineer
+
+Skills: Python, Machine Learning, SQL, TensorFlow, Data Analysis
+
+Experience:
+- Developed ML models for career prediction (2023-Present)
+- Built Flask APIs with PostgreSQL backend (2022-2023)
+
+Education:
+BSc Computer Science, University Name (2022-2025)

@@ -1,0 +1,11 @@
+﻿John Doe
+Healthcare Professional
+
+Skills: Patient Care, Medical Records, Communication, Microsoft Office, Healthcare Administration
+
+Experience:
+- Healthcare Assistant at NHS (2020-Present)
+- Medical Receptionist (2018-2020)
+
+Education:
+BSc Healthcare Studies, University Name (2018)
